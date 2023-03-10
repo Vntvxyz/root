@@ -70,9 +70,9 @@ func get() {
 	atomic.AddUint64(&reqCount, 1) // increment
 
 	if os.IsTimeout(err) {
-		color.Red.Println("Hoàn thành tấn công")
+		color.Red.Println("𝑯𝒐𝒂̀𝒏 𝒕𝒉𝒂̀𝒏𝒉 𝒕𝒂̂́𝒏 𝒄𝒐̂𝒏𝒈")
 	} else {
-		color.Green.Println("Chấp nhận yêu cầu tấn công")
+		color.Green.Println("𝑪𝒉𝒂̂́𝒑 𝒏𝒉𝒂̣̂𝒏 𝒚𝒆̂𝒖 𝒄𝒂̂̀𝒖 𝒕𝒂̂́𝒏 𝒄𝒐̂𝒏𝒈")
 	}
 
 	if err != nil {
@@ -90,13 +90,13 @@ func loop() {
 }
 
 func main() {
-	color.Cyan.Println("root - https://github.com/Vntvxyz/root")
+	color.Cyan.Println("𝐑𝐨𝐨𝐭 𝐁𝐲 𝐍𝐠𝐮𝐲𝐞̂̃𝐧 𝐓𝐡𝐚̀𝐧𝐡 𝐕𝐢𝐧𝐡")
 
 	flag.StringVar(&hostname, "url", "", "example: --url https://example.com")
 	flag.Parse()
 
 	if len(hostname) == 0 {
-		color.Red.Println("Thiếu tên máy chủ.")
+		color.Red.Println("𝙏𝙝𝙞𝙚̂́𝙪 𝙩𝙚̂𝙣 𝙢𝙖́𝙮 𝙘𝙝𝙪̉.")
 		color.Blue.Println("Example usage:\n\t ./root --url https://example.com")
 		os.Exit(1)
 	}
