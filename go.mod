@@ -1,4 +1,4 @@
-module github.com/zer-far/getblaze
+module github.com/Vntvxyz/root
 
 go 1.18
 
