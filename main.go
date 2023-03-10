@@ -85,7 +85,7 @@ func get() {
 func loop() {
 	for {
 		go get()
-		time.Sleep(1 * time.Millisecond) // sleep before sending request again
+		time.Sleep(100 * time.Millisecond) // sleep before sending request again
 	}
 }
 
