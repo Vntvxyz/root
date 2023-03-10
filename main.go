@@ -90,7 +90,7 @@ func loop() {
 }
 
 func main() {
-	color.Cyan.Println("root - https://github.com/ntvxyz/root")
+	color.Cyan.Println("root - https://github.com/Vntvxyz/root")
 
 	flag.StringVar(&hostname, "url", "", "example: --url https://example.com")
 	flag.Parse()
