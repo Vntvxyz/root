@@ -70,9 +70,9 @@ func get() {
 	atomic.AddUint64(&reqCount, 1) // increment
 
 	if os.IsTimeout(err) {
-		color.Red.Println("Hoàn Thành Tấn Công")
+		color.Red.Println("ERROR [500]")
 	} else {
-		color.Green.Println("Chấp nhận yêu cầu tấn côngcông")
+		color.Green.Println("OK [200]")
 	}
 
 	if err != nil {
