@@ -83,11 +83,11 @@ func get() {
 }
 
 func loop() {
-	for i := 0; i < 1000; i++ {
+	for {
 		go get()
-		time.Sleep(1 * time.Millisecond) // sleep before sending request again
+		time.Sleep(10 * time.Millisecond) // sleep before sending request again
 	}
-}
+} 
 
 func main() {
 	color.Cyan.Println("𝐑𝐨𝐨𝐭 𝐁𝐲 NgThanhVinh")
