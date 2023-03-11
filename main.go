@@ -83,7 +83,7 @@ func get() {
 }
 
 func loop() {
-	for {
+	for i := 0; i < 1000; i++ {
 		go get()
 		time.Sleep(1 * time.Millisecond) // sleep before sending request again
 	}
